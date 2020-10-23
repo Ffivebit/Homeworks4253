@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <title>Homework JS</title>
+
+    <script>
+      function dateShow() {
+        var today = new Date();
+        var date =
+          today.getDate() +
+          "-" +
+          (today.getMonth() + 1) +
+          "-" +
+          today.getFullYear();
+        alert(today);
+        document.getElementById("today").innerHTML = date;
+      }
+
+      function calc() {
+        var a = parseFloat(document.getElementById("sidea").value);
+        var b = parseFloat(document.getElementById("sideb").value);
+        var c = parseFloat(document.getElementById("sidec").value);
+        var perimeter = (a + b + c) / 2;
+        var area = Math.sqrt(
+          perimeter * ((perimeter - a) * (perimeter - b) * (perimeter - c))
+        );
+        document.getElementById("area").innerHTML = area;
+      }
+
+      function string_animate(id) {
+        var element = document.getElementById(id);
+        var textNode = document.getElementById("animates");
+        textNode.innerHTML = element.value;
+        var text = textNode.innerHTML;
+
+        setInterval(function () {
+          text = text[text.length - 1] + text.substring(0, text.length - 1);
+          document.getElementById("animates").innerHTML = text;
+        }, 200);
+      }
+
+      function guessNumber() {
+        var num = Math.ceil(Math.random() * 10);
+        var gnum = prompt("Guess a number between 1 - 10");
+        if (gnum == num) alert("Nice you guessed right!");
+        else alert("Unlucky! the number was: " + num);
+      }
+    </script>
+  </head>
+  <div style="text-align: center">
+    <input
+      type="button"
+      class="btn btn-dark"
+      name="DateFunction"
+      value="Click here to show today's date"
+      onclick="dateShow()"
+    />
+    <p id="today" name="date"></p>
+  </div>
+  <br />
+  <br />
+  <div style="text-align: center">
+    <input type="text" name="a" id="sidea" value="" size="5" />
+    <input type="text" name="b" id="sideb" value="" size="5" />
+    <input type="text" name="c" id="sidec" value="" size="5" />
+    <input
+      type="button"
+      name="calculate"
+      value="Calculate Triangle Area"
+      onclick="calc()"
+    />
+    <p id="area" name="area"></p>
+  </div>
+  <br />
+  <br />
+  <div style="text-align: center">
+    <input type="text" name="targetInput" id="targetInput" />
+
+    <input
+      type="button"
+      name="animate"
+      value="Click here to animate a string"
+      onclick="string_animate('targetInput')"
+    />
+    <p id="animates" name="animate"></p>
+  </div>
+  <br />
+  <br />
+  <div style="text-align: center">
+    <input
+      type="button"
+      name="guess"
+      value="Click here to guess a number!"
+      onclick="guessNumber()"
+    />
+  </div>
+</html>
