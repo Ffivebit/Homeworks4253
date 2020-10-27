@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <script defer src="Quiz.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  </head>
+<body>
+  <nav class="navbar-boot navbar-dark bg-primary makeCenter" >
+    <a class="navbar-brand topnavText"  href="Home.html">MidTerm</a>
+</nav>
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Quiz</h3>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="Home.html"  aria-expanded="false">Home</a>
+                </li>
+                <li>
+                    <a href="Quiz.html">Quiz</a>
+                </li>
+                <li>
+                    <a href="contact.html"  aria-expanded="false">Contact</a>
+                </li>
+            </ul>  
+        </nav>
+        <div id="content"> 
+            <div class="makeCenter">
+                <div class="input-group inputGroupSupp">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" >Name & ID</span>
+                    </div>
+                    <input type="text" aria-label="First name" class="form-control" id="name" required>
+                    <input type="number" aria-label="Last name" class="form-control" id="id" required>
+                  </div>  
+                  <br />
+                  <div id="quiz"></div>
+            <button type="submit" id="submit">Submit Quiz</button>
+            <div id="results"></div>
+        </div>
+        <input id="seconds-spent" size="6" readonly="" />
+        </div>
+    </div> 
+</body>
+</html>
