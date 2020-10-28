@@ -1,0 +1,11 @@
+MIGRATION PLAN:
+
+1.Import tables that DONT have foreign key(s) only from Nomenclatures (1)
+			THEN
+2.Import tables that have foreign keys only from Nomenclatures(2)
+			THEN
+3.Import tables that have foregin keys only from tables that are already imported with nomenclature 1 or 2
+			THEN
+4.Import tables that have foreign keys only from tables that are already imported with 1 or 2 or 3
+			THEN
+5.Check all constraints and validate all table foreign key data and Nomenclatures 
